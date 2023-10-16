@@ -1,0 +1,26 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: myGroup
+    producer:
+      properties:
+        spring:
+          json:
+            add:
+              type:
+                headers: false
+  mail:
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: 'true'
+          auth: 'false'
+    host: smtp.freesmtpservers.com
+    port: '25'
+  application:
+    name: notification-service
+server:
+  port: '9005'
+
