@@ -5,11 +5,11 @@
 <h2>Saga Flow:</h2>
 
 * OrderService receives a request to place an order.
-* It sends OrderPlaced event for InventoryService
-* InventoryService checks Inventory and sends StockReserved Event To Payment Service
-* PaymentService listens to StockReserved Event and process payment
-* PaymentService sends PaymentSuccessEvent to Notification Service if Payment is successful
-* PaymentService sends PaymentFailed Event to Order Service and Notification Service
+* It sends <b>OrderPlaced</b> event for InventoryService
+* InventoryService checks Inventory and sends <b>StockReserved</b> Event To Payment Service
+* PaymentService listens to <b>StockReserved</b> Event and process payment
+* PaymentService sends <b>PaymentSuccessEvent</b> to Notification Service if Payment is successful
+* PaymentService sends <b>PaymentFailedEvent</b> to Order Service and Notification Service
 * Order Service would cancel the order when Event Fails
 * Notification Service sends order succes/failed notifaction to customer
 
@@ -17,18 +17,20 @@
 Postman API test scripts can be found below.
 [link](./postman-collection/Saga-via-Kafka.postman_collection.json)
 
-### Create Product Inventory
+## Testing Screenshots:-
+
+### 1. Create Product Inventory
 ![img1.png](img1.png)
-### Create Order
+### 2. Create Orders
 ![img2.png](img2.png)
-### Kafka "Order Placed" topic after 6 Orders processed by Order Service:-
+### 3. Kafka "Order Placed" topic after 6 Orders processed by Order Service:-
 ![img3.png](img3.png)
-### Kafka "Inventory Reserved" After 6 Orders process by Inventory Service:-
+### 4. Kafka "Inventory Reserved" After 6 Orders process by Inventory Service:-
 ![img4.png](img4.png)
-### Kafka "Payment Failed" and "Payment Success" Topic Events After 6 Orders are process by Payment Service:-
+### 5. Kafka "Payment Failed" and "Payment Success" Topic Events After 6 Orders are process by Payment Service:-
 ![img5.png](img5.png)
-### Order cancelled using fallback(Saga Pattern) if Payment is Failed Otherwise Order procesed successfully:-
+### 6. Order cancelled using fallback(Saga Pattern) if Payment is Failed Otherwise Order procesed successfully:-
 ![img6.png](img6.png)
-### Order Confirmation/Cancellation Notifications SMTP:-
+### 7. Order Confirmation/Cancellation Notifications SMTP:-
 ![img7.png](img7.png)
 
