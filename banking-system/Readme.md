@@ -12,7 +12,7 @@
 
 <br/>
 
-Tasks 1 & 2:-
+<h2>Tasks 1 & 2:-</h2>
 
 * Transaction services receives request to initiate transaction
 * Transaction service calls account service to credit/debit account
