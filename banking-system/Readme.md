@@ -51,4 +51,4 @@ Postman API test scripts can be found below.
  ![img10.png](img10.png)
 
 ### 10.Notification Service Sends Email for Suspicious Activity
-![img11.png](im11.png)
+![img11.png](img11.png)
