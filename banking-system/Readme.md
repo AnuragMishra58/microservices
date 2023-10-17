@@ -1,44 +1,54 @@
-<h1 align="center"> Implementing Saga Pattern in Spring Boot:</h1>
+<h1 align="center"> Spring Microservice Design Patterns - Online Banking System </h1>
 <h2 align="left">Languages and Tools:</h2>
 <p align="left"> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> <a href="https://spring.io/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="40" height="40"/> </a> </p>
 <br/>
 <h2>Microservices</h2>
 
-* <h3>Order Service</h3>
-* <h3>Product Service</h3>
-* <h3>Payment Service</h3>
+* <h3>Account Management Service</h3>
+* <h3>Transaction Service</h3>
 * <h3>Notification Service</h3>
+* <h3>Audit Service</h3>
+* <h3>Fraud Detection Service</h3>
+
 <br/>
 
-<h2>Saga Flow:</h2>
+Tasks 1 & 2:-
 
-* OrderService receives a request to place an order.
-* It sends <b>OrderPlaced</b> event for InventoryService
-* InventoryService checks Inventory and sends <b>StockReserved</b> Event To Payment Service
-* PaymentService listens to <b>StockReserved</b> Event and process payment
-* PaymentService sends <b>PaymentSuccessEvent</b> to Notification Service if Payment is successful
-* PaymentService sends <b>PaymentFailedEvent</b> to Order Service and Notification Service
-* Order Service would cancel the order when Event Fails
-* Notification Service sends order succes/failed notifaction to customer
+* Transaction services receives request to initiate transaction
+* Transaction service calls account service to credit/debit account
+* Transaction service process transaction and sends <b>TransactionCompleted</b> or <b>TransactionFailed</b> Event 
+* Account Service listens to <b>TransactionFailed</b> event and reverts account balance
+* Fraud Service listens to <b>TransactionCompleted</b> event and analyses transaction
+* If transaction is Fraud, it sends <b>SuspiciousTransaction</b> Event
+* Notification Service listens to <b>SuspiciousTransaction</b> Event and sends out email notification
 
 <h2> Postman Script </h2>
 Postman API test scripts can be found below.
-[link](./postman-collection/Saga-via-Kafka.postman_collection.json)
+[link](./postman-collection/BankingApp.postman_collection.json)
 
 ## Testing Screenshots:-
 
-### 1. Create Product Inventory
+### 1. Create Account
 ![img1.png](img1.png)
-### 2. Create Orders
+### 2. Initiate Transaction:-
 ![img2.png](img2.png)
-### 3. Kafka "Order Placed" topic after 6 Orders processed by Order Service:-
+### 3. Kafka Transaction Completed Topic:-
 ![img3.png](img3.png)
-### 4. Kafka "Inventory Reserved" After 6 Orders process by Inventory Service:-
+### 4. Updated Account
 ![img4.png](img4.png)
-### 5. Kafka "Payment Failed" and "Payment Success" Topic Events After 6 Orders are process by Payment Service:-
+### 5. Initiate another Transaction
 ![img5.png](img5.png)
-### 6. Order cancelled using fallback(Saga Pattern) if Payment is Failed Otherwise Order procesed successfully:-
+### 6. Transaction Failed Topic
 ![img6.png](img6.png)
-### 7. Order Confirmation/Cancellation Notifications SMTP:-
+### 7.Account balance reverted:-
 ![img7.png](img7.png)
+### 8.Initiate Suspicious Transaction with Amount > 50000
+![img7.png](img8.png)
+### 9.Fraud Service listens TransactionCompletedEvent and Analyses Transaction
+ #### Transaction Completed Topic
+ ![img9.png](img9.png)
+ #### Suspicious Activity Topic
+ ![img10.png](img10.png)
 
+### 10.Notification Service Sends Email for Suspicious Activity
+![img11.png](im11.png)
