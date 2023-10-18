@@ -82,6 +82,25 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Get Audit Records",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/audits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"audits"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
