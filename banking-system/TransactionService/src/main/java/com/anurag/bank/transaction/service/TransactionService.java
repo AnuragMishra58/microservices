@@ -32,12 +32,12 @@ public class TransactionService {
         Random random = new Random();
         if (random.nextBoolean()) {
             log.info("Transaction Completed");
-            kafkaTemplate.send("TransactionCompletedEvent", transaction);
             transaction.setStatus("COMPLETED");
+            kafkaTemplate.send("TransactionCompletedEvent", transaction);
         } else {
             log.info("Transaction Failed");
-            kafkaTemplate.send("TransactionFailedEvent", transaction);
             transaction.setStatus("FAILED");
+            kafkaTemplate.send("TransactionFailedEvent", transaction);
         }
 
         return repository.save(transaction);
