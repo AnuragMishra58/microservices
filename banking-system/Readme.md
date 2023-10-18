@@ -59,6 +59,6 @@ Postman API test scripts can be found below.
 ### 10.Notification Service Sends Email for Suspicious Activity
 ![img11.png](img11.png)
 
-### Task 2. Audit Service Tracking Transactions
+### Task 3. Audit Service Tracking Transactions
 ![img12.png](img12.png)
 
