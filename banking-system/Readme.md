@@ -35,30 +35,30 @@ Postman API test scripts can be found below.
 ## Testing Screenshots:-
 
 ### 1. Create Account
-![img1.png](img1.png)
+![img1.png](./images/img1.png)
 ### 2. Initiate Transaction:-
-![img2.png](img2.png)
+![img2.png](./images/img2.png)
 ### 3. Kafka Transaction Completed Topic:-
-![img3.png](img3.png)
+![img3.png](./images/img3.png)
 ### 4. Updated Account
-![img4.png](img4.png)
+![img4.png](./images/img4.png)
 ### 5. Initiate another Transaction
-![img5.png](img5.png)
+![img5.png](./images/img5.png)
 ### 6. Transaction Failed Topic
-![img6.png](img6.png)
+![img6.png](./images/img6.png)
 ### 7.Account balance reverted:-
-![img7.png](img7.png)
+![img7.png](./images/img7.png)
 ### 8.Initiate Suspicious Transaction with Amount > 50000
-![img7.png](img8.png)
+![img7.png](./images/img8.png)
 ### 9.Fraud Service listens TransactionCompletedEvent and Analyses Transaction
  #### Transaction Completed Topic
- ![img9.png](img9.png)
+ ![img9.png](./images/img9.png)
  #### Suspicious Activity Topic
- ![img10.png](img10.png)
+ ![img10.png](./images/img10.png)
 
 ### 10.Notification Service Sends Email for Suspicious Activity
-![img11.png](img11.png)
+![img11.png](./images/img11.png)
 
 ### Task 3. Audit Service Tracking Transactions
-![img12.png](img12.png)
+![img12.png](./images/img12.png)
 
