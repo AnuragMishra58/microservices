@@ -1,0 +1,16 @@
+server:
+  port: 8084
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      properties:
+        spring.json.trusted.packages: "com.anurag.bank.transaction.entity"
+      group-id: myGroup1
+    producer:
+      properties:
+        spring:
+          json:
+            add:
+              type:
+                headers: false
