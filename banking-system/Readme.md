@@ -22,10 +22,11 @@
 * If transaction is Fraud, it sends <b>SuspiciousTransaction</b> Event
 * Notification Service listens to <b>SuspiciousTransaction</b> Event and sends out email notification
 
-  <h2>Task 3:- Audit Service Tracking Transactions</h2>
-  * Every transaction should be audited and logged, providing a trail for future references.
-  * This has been implemented using events TransactionCompleted and TransactionFailed
-  * Audit Servce listens to both the events and creates audit record
+<h2>Task 3:- Audit Service Tracking Transactions</h2>
+
+* Every transaction should be audited and logged, providing a trail for future references.
+* This has been implemented using events TransactionCompleted and TransactionFailed
+* Audit Service listens to both events and creates audit record
 
 <h2> Postman Script </h2>
 Postman API test scripts can be found below.
