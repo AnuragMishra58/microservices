@@ -39,7 +39,7 @@ Example: For sending SMS and Email notifications, instead of calling third-party
 <h2>How to run services</h2>
 <ul>
 <li>Run build-projects.bat in root to compile and build jars</li>
-<li>Run docker-compose up in root folder to bring up kafka/zookeeper followed by all services</li>
+<li>Run docker-compose up in root folder to build docker images and start kafka/zookeeper followed by all services</li>
 <li>Access <a href="http://localhost:8761">http://localhost:8761</a> to view services</li>
 <li>Liquibase scripts would pre-load dataset in h2 for testing</li>
 <li>Run attached postman tests to create hotel reservation and cancel reservation</li>
