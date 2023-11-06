@@ -28,8 +28,9 @@ Example: For sending SMS and Email notifications, instead of calling third-party
 * <h3>Hotel Management Service: </h3>Manages room inventories.
 * <h3>Notification  Service: </h3>Sends out notifications.
 <p>
-<h2>Pre-requisites to Run Services</h2>
+<h2>Pre-requisites to Build & Run Services</h2>
 <ul>
+  <li><h4>Java 17</h4></li>
   <li><h4>Maven</h4></li>
   <li><h4>Docker Engine</h4></li>
   <li><h4>Postman</h4>  </li>
