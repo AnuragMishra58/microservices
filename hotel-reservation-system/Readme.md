@@ -13,6 +13,10 @@ Example: If the refund is not processed, the reservation is not canceled, and th
 
 Example: A user makes a reservation. The API gateway routes this request to the Reservation Service, which then talks to the Payment Service and Hotel Management Service.
 
+<h4>Proxy Pattern:</h4> When you have to interact with an external service or library, wrap it within a Proxy Service. The Proxy pattern will help you control access, logging, and security features for accessing the third-party or costly resources.
+
+Example: For sending SMS and Email notifications, instead of calling third-party services directly, they could be routed through a Notification Proxy that batches requests or caches repeated requests to the same number/email to reduce costs.
+
 </p>
 <h2>Microservices</h2>
 
