@@ -15,11 +15,11 @@
 <br/>
 
 <h2>Key Microservice Patterns Used</h3>
-Saga Pattern: Primarily used in the refund process to ensure that a series of local transactions are all executed or compensated. Each step is an individual local transaction and has a compensating transaction.
+<h4>Saga Pattern:</h4> Primarily used in the refund process to ensure that a series of local transactions are all executed or compensated. Each step is an individual local transaction and has a compensating transaction.
 
 Example: If the refund is not processed, the reservation is not canceled, and the user is notified.
 
-API Gateway Pattern: All client requests go through an API Gateway (Zuul/Spring Cloud Gateway), which routes requests to appropriate services.
+</h4>API Gateway Pattern:</h4> All client requests go through an API Gateway (Zuul/Spring Cloud Gateway), which routes requests to appropriate services.
 
 Example: A user makes a reservation. The API gateway routes this request to the Reservation Service, which then talks to the Payment Service and Hotel Management Service.
 
