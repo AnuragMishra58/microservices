@@ -38,7 +38,7 @@ Example: A user makes a reservation. The API gateway routes this request to the 
 <li>Access <a href="http://localhost:8761">http://localhost:8761</a> to view services</li>
 <li>Liquibase scripts would pre-load dataset in h2 for testing</li>
 <li>Run attached postman tests to create hotel reservation and cancel reservation</li>
-<li>Access <a href="https://www.wpoven.com/tools/free-smtp-server-for-testing">Email Server</a> and check email box noreply@amhotels.com to look for hotel booking/cancellation emailnotifications</li>
+<li>Access <a href="https://www.wpoven.com/tools/free-smtp-server-for-testing">Email Server</a> and check email box noreply@amhotels.com to look for hotel booking/cancellation email notifications</li>
 </ul>
 <h2> Postman Script </h2>
 Postman API test scripts can be found below.
