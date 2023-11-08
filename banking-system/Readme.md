@@ -38,7 +38,7 @@
 Postman API test scripts can be found below.
 [link](./postman-collection/BankingApp.postman_collection.json)
 
-## Testing Screenshots:-
+## Workflow Screenshots:-
 
 ### 1. Create Account
 ![img1.png](./images/img1.png)
