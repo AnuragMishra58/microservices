@@ -18,7 +18,7 @@
 
 <br/>
 
-<h2>Tasks 1 & 2:-</h2>
+<h2>Functional Workflow 1:-</h2>
 
 * Transaction services receives request to initiate transaction
 * Transaction service calls account service to credit/debit account
@@ -28,7 +28,7 @@
 * If transaction is Fraud, it sends <b>SuspiciousTransaction</b> Event
 * Notification Service listens to <b>SuspiciousTransaction</b> Event and sends out email notification
 
-<h2>Task 3:- Audit Service Tracking Transactions</h2>
+<h2>Functional Workflow 2- Audit Service Tracking Transactions</h2>
 
 * Every transaction should be audited and logged, providing a trail for future references.
 * This has been implemented using events TransactionCompleted and TransactionFailed
