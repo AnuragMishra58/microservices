@@ -1,6 +1,12 @@
 <h1 align="center"> Spring Microservice Design Patterns - Online Banking System </h1>
 <h2 align="left">Languages and Tools:</h2>
-<p align="left"> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> <a href="https://spring.io/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="40" height="40"/> </a> </p>
+<p align="left"> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="50" height="50"/> </a> <a href="https://kafka.apache.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-icon.svg" alt="kafka" width="50" height="50"/> </a> <a href="https://postman.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="50" height="50"/> </a> <a href="https://spring.io/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="50" height="50"/> </a> </p>
+<br/>
+<h2>Key Microservice Patterns Used</h3>
+<ul>
+ <li><h4>API Gateway:</h4> Utilized Spring Cloud Gateway for routing requests and isolating internal microservice architectures from client apps.</li>
+ <li><h4>Event-Driven System:</h4> Implemented events, channels, and queues to manage asynchronous communication between microservices.</li>
+</ul>
 <br/>
 <h2>Microservices</h2>
 
